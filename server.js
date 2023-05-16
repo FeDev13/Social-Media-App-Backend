@@ -37,6 +37,9 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 const server = app.listen(process.env.PORT, () =>
   console.log(`Server started on ${process.env.PORT}`)
 );
+app.get("/", (request, response) => {
+  response.send("<h1>Home</h1>");
+});
 const io = socket(server, {
   cors: {
     origin: "http://localhost:5173",
