@@ -1,6 +1,8 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://127.0.0.1:27017/SocialMedia')
-    .then(()=>{console.log('Connection established')})
-    .catch(error => handleError(error));
-
+mongoose
+  .connect("mongodb://0.0.0.0:27017/SocialMedia")
+  .then(() => {
+    console.log("Connection established");
+  })
+  .catch((error) => handleError(error));
